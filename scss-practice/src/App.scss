@@ -1,0 +1,73 @@
+.App {
+  padding: 40px 20px;
+}
+
+div {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: black;
+}
+
+// 1.변수 만들기
+$메인칼라: rgb(83, 153, 150);
+.redDiv {
+  // 변수 사용 시에도 달러 기호와 변수명
+  background-color: $메인칼라;
+}
+
+// 2. import하기
+@import "./_reset.scss";
+
+// 3. nesting : 셀렉터가 복잡해지거나 중복될 때
+// 원래는 이렇게 사용하지만
+div.container h4 {
+  color: blue;
+}
+
+div.container h3 {
+  color: green;
+}
+
+// 이렇게 부모 셀렉터 안에 하위 셀렉터를 여러개 넣을 수 있다.
+div.container {
+  h4 {
+    background-color: orange;
+  }
+  h3 {
+    background-color: orangered;
+  }
+}
+
+// 4. extend 문법을 통해 비슷한 코드 축약하기
+// 기본 알림창 코드
+.lightAlert {
+  background-color: #e5e5e5;
+  padding: 20px;
+  border-radius: 5px;
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.darkAlert {
+  // @extend .셀렉터명을 입력하면 해당 셀렉터의 정보를 가져온다.
+  // styled-components에서 styled(.lightAlert)와 같은 역할
+  @extend .lightAlert;
+  background-color: black;
+  color: white;
+}
+
+// 5. @mixin과 @include를 사용해서 함수 만들기
+//함수의 위치는 위에 (인식할 수 있도록).
+
+@mixin dottedFunc() {
+  text-decoration: line-through;
+  color: rgb(104, 63, 3);
+}
+
+.test {
+  @include dottedFunc;
+}

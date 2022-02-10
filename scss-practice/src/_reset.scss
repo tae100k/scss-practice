@@ -1,0 +1,12 @@
+// reset: 브라우저 호환성을 위한 짜놓은 기본 파일
+// 컴파일 하지 말라고 _를 사용함
+
+body {
+  margin: 0;
+}
+
+div {
+  border: 1px solid #eee;
+  color: purple;
+  box-sizing: border-box;
+}
