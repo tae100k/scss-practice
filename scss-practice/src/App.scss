@@ -63,6 +63,27 @@ div.container {
   color: white;
 }
 
+.redAlert {
+  // @extend .셀렉터명을 입력하면 해당 셀렉터의 정보를 가져온다.
+  // styled-components에서 styled(.lightAlert)와 같은 역할
+  @extend .lightAlert;
+  background-color: red;
+  color: black;
+}
+
+.yellowAlert {
+  // @extend .셀렉터명을 입력하면 해당 셀렉터의 정보를 가져온다.
+  // styled-components에서 styled(.lightAlert)와 같은 역할
+  @extend .redAlert;
+  background-color: yellow;
+}
+.blueAlert {
+  // @extend .셀렉터명을 입력하면 해당 셀렉터의 정보를 가져온다.
+  // styled-components에서 styled(.lightAlert)와 같은 역할
+  @extend .redAlert;
+  background-color: blue;
+}
+
 // 5. @mixin과 @include를 사용해서 함수 만들기
 //함수의 위치는 위에 (인식할 수 있도록).
 
