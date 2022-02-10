@@ -34,9 +34,11 @@ div.container h3 {
 div.container {
   h4 {
     background-color: orange;
+    font-size: 14px;
   }
   h3 {
     background-color: orangered;
+    font-size: 14px;
   }
 }
 
@@ -46,6 +48,7 @@ div.container {
   background-color: #e5e5e5;
   padding: 20px;
   border-radius: 5px;
+  border: none;
   p {
     margin: 0px;
     padding: 0px;
@@ -63,11 +66,18 @@ div.container {
 // 5. @mixin과 @include를 사용해서 함수 만들기
 //함수의 위치는 위에 (인식할 수 있도록).
 
-@mixin dottedFunc() {
+@mixin textLineFunc() {
   text-decoration: line-through;
   color: rgb(104, 63, 3);
+  font: weight 600px;
+  margin-left: 20px;
+}
+
+@mixin italicFunc() {
+  font-style: italic;
 }
 
 .test {
-  @include dottedFunc;
+  @include textLineFunc;
+  @include italicFunc;
 }

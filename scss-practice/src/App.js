@@ -18,7 +18,6 @@ function App() {
         <p>3. @extend 다크 알림창</p>
       </div>
       <h2>4. @mixin, @include사용</h2>
-
       <p className="test">4. mixin으로 취소선 삽입</p>
     </div>
   );
